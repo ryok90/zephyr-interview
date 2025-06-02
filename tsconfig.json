@@ -2,5 +2,18 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/host-e2e"
+    },
+    {
+      "path": "./apps/host"
+    },
+    {
+      "path": "./apps/remote-e2e"
+    },
+    {
+      "path": "./apps/remote"
+    }
+  ]
 }
