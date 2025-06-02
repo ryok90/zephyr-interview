@@ -1,21 +1,26 @@
-import Table, { TableData } from '../components/table/table';
+import Table, { type TableData } from '../components/table/table';
 import '../styles.css';
 
 const tableData: TableData[] = [
   {
-    name: 'John Doe',
-    age: 25,
-    email: 'john.doe@email.com',
+    name: 'Nyjah Huston',
+    dateOfBirth: '1994-11-30',
+    email: 'nyjah.huston@email.com',
   },
   {
-    name: 'Jane Doe',
-    age: 23,
-    email: 'jane.doe@email.com',
+    name: 'Sean Malto',
+    dateOfBirth: '1989-09-09',
+    email: 'sean.alto@email.com',
   },
   {
-    name: 'John Smith',
-    age: 30,
-    email: 'john.smith@email.com',
+    name: 'Mike Mo',
+    dateOfBirth: '1990-03-27',
+    email: 'mike.mo@email.com',
+  },
+  {
+    name: 'Torey Pudwill',
+    dateOfBirth: '1990-05-02',
+    email: 'torey.pudwill@email.com',
   },
 ];
 

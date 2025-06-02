@@ -2,21 +2,37 @@ import { lazy, Suspense } from 'react';
 import type { TableData } from 'remote/Module';
 
 const Table = lazy(() => import('remote/Module'));
-const tableData: TableData[] = [
+
+/**
+ * Do not change this type.
+ * Fixes needed from this will need to be applied
+ * where the type is being used.
+ */
+type BrokenTableData = TableData & {
+  address: string;
+};
+
+// The fix here must still include the use of BrokenTableData
+const tableData: BrokenTableData[] = [
   {
-    name: 'San Francisco',
-    age: 66,
-    email: 'san.francisco@email.com',
+    name: 'Luan Oliveira',
+    dateOfBirth: '1990-09-22',
+    email: 'luan.oliveira@email.com',
   },
   {
-    name: 'Alex Smith',
-    age: 42,
-    email: 'alex.smith@email.com',
+    name: 'Yuto Horigome',
+    dateOfBirth: '1999-01-07',
+    email: 'yuto.horigome@email.com',
   },
   {
-    name: 'Mary Jane',
-    age: 77,
-    email: 'mary.jane@email.com',
+    name: 'Jamie Foy',
+    dateOfBirth: '1996-06-14',
+    email: 'jamie.foy@email.com',
+  },
+  {
+    name: 'Jagger Eaton',
+    dateOfBirth: '2001-02-21',
+    email: 'jagger.eaton@email.com',
   },
 ];
 
