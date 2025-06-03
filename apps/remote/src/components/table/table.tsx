@@ -1,14 +1,5 @@
 import styles from './table.module.css';
 
-/**
- * Do not change this type.
- * Fixes needed from this will need to be applied
- * where the type is being used.
- */
-export type BrokenTableData = TableData & {
-  address: string;
-};
-
 export type TableData = {
   name: string;
   dateOfBirth: string;

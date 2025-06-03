@@ -12,7 +12,7 @@ type BrokenTableData = TableData & {
   address: string;
 };
 
-// The fix here must still include the use of BrokenTableData
+/** The fix here must still include the use of BrokenTableData */
 const tableData: BrokenTableData[] = [
   {
     name: 'Luan Oliveira',
