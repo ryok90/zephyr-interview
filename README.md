@@ -7,25 +7,27 @@ This is a small challenge to showcase one's ability to debug issues around the b
 There are several problems with this repository which the candidate must debug, research and resolve.
 
 To get started you must first clone this repository:
-
 ```bash
 git clone git@github.com:ryok90/zephyr-interview.git
 ```
 
-Install the dependencies
+cd into folder:
+```bash
+cd zephyr-interview
+```
 
+Install the dependencies:
 ```bash
 pnpm i
 ```
 
 And run the host application:
-
 ```bash
 npx nx run host:serve
 ```
 
 The complete resolution of the application must look something like this:
 
-![expected result ](expected-result.webp)
+![expected result](expected-result.webp)
 
 Good luck!
