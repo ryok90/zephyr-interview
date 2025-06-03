@@ -4,7 +4,7 @@ import type { TableData } from 'remote/Module';
 const Table = lazy(() => import('remote/Module'));
 
 /**
- * Do not change this type.
+ * Do not change this type!
  * Fixes needed from this will need to be applied
  * where the type is being used.
  */
@@ -12,30 +12,38 @@ type BrokenTableData = TableData & {
   address: string;
 };
 
-/** The fix here must still include the use of BrokenTableData */
-const tableData: BrokenTableData[] = [
-  {
-    name: 'Luan Oliveira',
-    dateOfBirth: '1990-09-22',
-    email: 'luan.oliveira@email.com',
-  },
-  {
-    name: 'Yuto Horigome',
-    dateOfBirth: '1999-01-07',
-    email: 'yuto.horigome@email.com',
-  },
-  {
-    name: 'Jamie Foy',
-    dateOfBirth: '1996-06-14',
-    email: 'jamie.foy@email.com',
-  },
-  {
-    name: 'Jagger Eaton',
-    dateOfBirth: '2001-02-21',
-    email: 'jagger.eaton@email.com',
-  },
-];
+const luan: TableData = {
+  name: 'Luan Oliveira',
+  dateOfBirth: '1990-09-22',
+  email: 'luan.oliveira@email.com',
+};
 
+/**
+ * The following variables does not need the address property
+ * but the types here needs fixing.
+ *
+ * The fix here must still include the use of BrokenTableData.
+ *
+ * For each variable, try and come up with a different solution
+ * still using BrokenTableData.
+ */
+const yuto: BrokenTableData = {
+  name: 'Yuto Horigome',
+  dateOfBirth: '1999-01-07',
+  email: 'yuto.horigome@email.com',
+};
+const jamie: BrokenTableData = {
+  name: 'Jamie Foy',
+  dateOfBirth: '1996-06-14',
+  email: 'jamie.foy@email.com',
+};
+const jagger: BrokenTableData = {
+  name: 'Jagger Eaton',
+  dateOfBirth: '2001-02-21',
+  email: 'jagger.eaton@email.com',
+};
+
+const tableData = [luan, yuto, jamie, jagger];
 
 export function App() {
   return (
