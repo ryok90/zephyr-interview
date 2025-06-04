@@ -34,7 +34,9 @@ export function Table({ data }: TableProps) {
       <table className={`${styles.table} mt-6`}>
         <thead>
           <tr>
-            <th className={styles.tableHeader}>Total Letter Numbers - [letter:total]</th>
+            <th className={styles.tableHeader}>
+              Letter counters in all the names - [letter:total]
+            </th>
             <th className={styles.tableHeader}>Average Age</th>
           </tr>
         </thead>
@@ -67,13 +69,23 @@ const totalLetterNumbers = (data: TableData[]): string => {
 };
 
 const averageAge = (data: TableData[]): number => {
-  const totalAge = data.reduce((prev, person) => prev + age(person.dateOfBirth), '')
+  const totalAge = data.reduce((prev, person) => {
+    return prev + age(person.dateOfBirth);
+  }, '');
 
-  return +totalAge / data.length
-}
+  return +totalAge / data.length;
+};
 
-const age = (b: string) =>
-  new Date(new Date().getTime() - new Date(b).getTime()).getUTCFullYear() -
-  1970;
+const age = (dateOfBirth: string): number => {
+  const currentTime = new Date().getTime();
+  const birthTime = new Date(dateOfBirth).getTime();
+  const timeDifference = currentTime - birthTime;
+
+  // Convert milliseconds to years by creating a date from the difference
+  // and getting the year component (subtracting 1970 as the epoch year)
+  const ageInYears = new Date(timeDifference).getUTCFullYear() - 1970;
+
+  return ageInYears;
+};
 
 export default Table;
