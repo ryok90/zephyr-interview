@@ -4,7 +4,7 @@ import type { TableData } from 'remote/Module';
 const Table = lazy(() => import('remote/Module'));
 
 /**
- * Do not change this type!
+ * DO NOT CHANGE THIS TYPE!
  * Fixes needed from this will need to be applied
  * where the type is being used.
  */
@@ -17,6 +17,11 @@ const luan: TableData = {
   dateOfBirth: '1990-09-22',
   email: 'luan.oliveira@email.com',
 };
+const yuto: TableData = {
+  name: 'Yuto Horigome',
+  dateOfBirth: '1999-01-07',
+  email: 'yuto.horigome@email.com',
+};
 
 /**
  * The following variables does not need the address property
@@ -27,11 +32,6 @@ const luan: TableData = {
  * For each variable, try and come up with a different solution
  * still using BrokenTableData.
  */
-const yuto: BrokenTableData = {
-  name: 'Yuto Horigome',
-  dateOfBirth: '1999-01-07',
-  email: 'yuto.horigome@email.com',
-};
 const jamie: BrokenTableData = {
   name: 'Jamie Foy',
   dateOfBirth: '1996-06-14',
